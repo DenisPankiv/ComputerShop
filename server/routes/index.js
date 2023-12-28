@@ -1,0 +1,23 @@
+const Router = require('express')
+const router = new Router()
+const brachesRouter = require ('./branchesRouter')
+const clientsRouter = require ('./clientsRouter')
+const discountRouter = require ('./discountRouter')
+const ordersRouter = require ('./ordersRouter')
+const workshopsRouter = require ('./workshopsRouter')
+const componentInventoryRouter = require ('./componentInventoryRouter')
+const computerComponentsRouter = require ('./computerComponentsRouter')
+const computerModelsRouter = require ('./computerModelsRouter')
+const listComponentRouter = require ('./listComponentRouter')
+
+router.use('/clients', clientsRouter)
+router.use('/branches', brachesRouter)
+router.use('/computerComponents', computerComponentsRouter)
+router.use('/discounts', discountRouter)
+router.use('/orders', ordersRouter)
+router.use('/componentInventory', componentInventoryRouter)
+router.use('/listComponent', listComponentRouter)
+router.use('/workshops',workshopsRouter)
+router.use('/computerModels', computerModelsRouter)
+
+module.exports = router
